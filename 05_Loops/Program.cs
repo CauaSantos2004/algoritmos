@@ -16,7 +16,7 @@ namespace _05_Loops
 
             //Lopp while
             //Sintaxe: while( expressão booleana)
-            while (continuar.ToUpper() !== "S") //"ToUpper()" converte o texto para Maiúsculo
+            while (continuar.ToUpper() != "S") //"ToUpper()" converte o texto para Maiúsculo
             {
 
                 Console.WriteLine("Digite o {0}ª nome: ", contador + 1); // Mostra uma mensagem pedindo o nome e indica o número do nome (contador + 1)
