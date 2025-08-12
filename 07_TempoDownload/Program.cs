@@ -22,7 +22,7 @@ namespace _07_TempoDownload
                 variavel EntradaValida fica TRUE
                 caso contrário, a variavel EntradaValida fica FALSE e o Loop repetirá a pergunta.
                 */
-                EntradaValida = double.TryParse(Console.ReadLine(), out TamanhoMB) && TamanhoMB > 0;
+                EntradaValida = double.TryParse(Console.ReadLine(), out TamanhoMB) && TamanhoMB > 0;  //"&&" significa "AND"
 
 
                 if (!EntradaValida) // Se a entrada não for válida (não numérica ou menor/igual a zero)
@@ -59,7 +59,32 @@ namespace _07_TempoDownload
             double tempoSegundos = (TamanhoMB * 8) / VelocidadeMB;
             double tempoMinutos = tempoSegundos / 60;
 
-            Console.WriteLine($"Tempo aproximado de download: {tempoMinutos:F2} minutos");
+            Console.WriteLine($"Tempo aproximado de download: {tempoMinutos:F2} minutos"); // com interpolação de String e para o resultado ser formatado com duas casas deimais
+                 
+            
+            /*
+             Mesmo código, porém coma formatação do professor:
+
+            double tamanhoMB = 0;
+            double velocidadeMbps = 0;
+            double tempoSegundos, tempoMinutos;
+
+            Loop Infinito
+            while (true)
+            {
+                //Operadores Lógicos: && -> AND (e lógico) / || -> OR(ou lógico)
+                Console.WriteLine("Informe o tamanho do arquivo (MB): ");
+                if (double.TryParse(Console.ReadLIne(), out tamanhoMB) && tamanhoMB > 0)
+                //NESSA LINHA ABAIXO, SAI DO LOOP
+                break
+                
+                else
+                    Consoloe.WriteLine("Valor Inválido! Digite um número maior que Zero.")
+                }
+
+
+             */
+
         }   
 
         }
