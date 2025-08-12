@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_TempoDownload", "07_TempoDownload.csproj", "{A162CDED-32CA-4A8A-A3DC-09263E139023}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A162CDED-32CA-4A8A-A3DC-09263E139023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A162CDED-32CA-4A8A-A3DC-09263E139023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A162CDED-32CA-4A8A-A3DC-09263E139023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A162CDED-32CA-4A8A-A3DC-09263E139023}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {023B05D1-8A15-486D-B641-F2BBD2F42743}
+	EndGlobalSection
+EndGlobal
