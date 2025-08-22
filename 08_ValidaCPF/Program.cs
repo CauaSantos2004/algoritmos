@@ -128,6 +128,11 @@ namespace _08_ValidaCPF
             }
             */
 
+
+
+            //PARA ELIMINAR CARACTERES NÃO NUMERICOS QUE TEM DENTRO DE UMA VARIAVEL:
+            // string frase = "Eu gosto de Java";
+            //  string novaFrase = frase.Replace("Java", "C#"); (SUBISTITUI A PALAVRA JAVA POR C#
         }
 
 
