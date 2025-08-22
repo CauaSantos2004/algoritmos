@@ -56,18 +56,18 @@ namespace _08_ValidaCPF
 
 
             }
-            int dv1 = 11 - (soma % 11);
-            if (dv1 >= 10) dv1 = 0;
+            int dv1 = 11 - (soma % 11); // Calcula o primeiro dígito verificador (DV1) do CPF
+            if (dv1 >= 10) dv1 = 0;  // Se o resultado for maior ou igual a 10, o dígito vira 0 (regra oficial do CPF)
 
             // Calculando o segundo digito verificador do CPF
-            soma = 0;
-            string cpfComDV1 = CpfBase + dv1;
-            for (int i = 0, peso = 11; i < 10; i++, peso--)
+            soma = 0;  // Zera a variável soma para começar novo cálculo
+            string cpfComDV1 = CpfBase + dv1; // Junta os 9 dígitos do CPF base com o primeiro dígito verificador já calculado
+            for (int i = 0, peso = 11; i < 10; i++, peso--) // Faz o cálculo do segundo dígito verificador
             {
-                soma += (cpfComDV1[i] - '0') * peso;
+                soma += (cpfComDV1[i] - '0') * peso; // Converte o caractere para número ((cpfComDV1[i] - '0')) e multiplica pelo peso
             }
-            int dv2 = 11 - (soma % 11);
-            if (dv2 >= 10) dv2 = 0;
+            int dv2 = 11 - (soma % 11); // Aplica a fórmula para obter o segundo dígito verificador
+            if (dv2 >= 10) dv2 = 0; // Se o resultado for maior ou igual a 10, o dígito vira 0
 
             Console.WriteLine($"CPF completo: {CpfBase} / os digitos verificadores são {dv1}{dv2}");
 
@@ -75,11 +75,11 @@ namespace _08_ValidaCPF
             if (int.Parse(CpfSemSPontos[9].ToString()) == dv1 &&
                 int.Parse(CpfSemSPontos[10].ToString()) == dv2)
             {
-                Console.WriteLine("CPF Válido");
+                Console.WriteLine("CPF Válido");     // Se os dois baterem, o CPF é válido
             }
             else
             {
-                Console.WriteLine("CPF Inválido");
+                Console.WriteLine("CPF Inválido");  // Se algum dígito não bater, o CPF é inválido
             }
             //FIM DO MEU CÓDIGO
 
