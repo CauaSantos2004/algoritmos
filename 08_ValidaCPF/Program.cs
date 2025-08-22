@@ -102,7 +102,7 @@ namespace _08_ValidaCPF
             return digito;
         }
 
-        //ctrl + RR é um atalho que renomeia variavel, classe, método e substitui em todo o código
-        //ctrl + K + C é um atalho na qual deixa o código selecionado como um comentario
+        //ctrl + RR é um atalho que renomeia variavel, classe, método e substitui em todo o código.
+        //ctrl + K + C é um atalho na qual deixa o código selecionado como um comentario.
     }
 }
