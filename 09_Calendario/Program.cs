@@ -127,12 +127,21 @@ namespace _09_Calendario
                 feriados[indice++] = 25;
 
             }
-            
 
-            return feriados;    
+            DateTime domingoDePascoa = DomingoDePascoa(ano);
 
-                
+            DateTime tercaCarnaval = 
+            DateTime sextaSanta =
+            DateTime corpusChristi = 
+
+            return feriados;
         }
-    }   
 
+        public static DateTime DomingoDePascoa(int ano)
+        {
+
+
+            return;
+        }
+    }
 }
