@@ -11,7 +11,7 @@ namespace _09_Calendario
     {
         static void Main(string[] args)
         {
-            //Solicita o ano
+            // Solicita o ano
             Console.Write("Digite o ano: ");
             int ano = int.Parse(Console.ReadLine());
 
@@ -19,20 +19,20 @@ namespace _09_Calendario
             for (int mes = 1; mes <= 12; mes++)
             {
 
-                //Descobre a quantidade de dias de um mês (mês que o usúario digitou)
+                // Descobre a quantidade de dias de um mês (mês que o usúario digitou)
                 int diasDoMes = DateTime.DaysInMonth(ano, mes);
 
-                //Descobre o dia da semana do primeiro dia do mês
+                // Descobre o dia da semana do primeiro dia do mês
                 // 0 = Domingo - 6 = Sábado
-                //Gera o primeiro dia do mês e ano informado pelo usúario
+                // Gera o primeiro dia do mês e ano informado pelo usúario
                 DateTime primeiroDiaMes = new DateTime(ano, mes, 1);
                 int diaSemanaInicio = (int)primeiroDiaMes.DayOfWeek;
 
-                //Matriz de 6 semanas e 7 dias
+                // Matriz de 6 semanas e 7 dias
                 int[,] calendario = new int[6, 7];
                 int dia = 1;
 
-                //Preenche a matriz com os dois dias do mês
+                // Preenche a matriz com os dois dias do mês
                 for (int semana = 0; semana < 6; semana++)
                 {
                     for (int diaSemana = 0; diaSemana < 7; diaSemana++)
@@ -48,14 +48,16 @@ namespace _09_Calendario
                         }
                     }
                 }
+
+                // imprime o calendário
                 Console.WriteLine($"\nCalendário de " +
                     $"{primeiroDiaMes.ToString("MMMM")} de {ano}");
                 Console.WriteLine("DOM\tSEG\tTER\tQUA\tQUI\tSEX\tSAB");
 
-                //int[] diasFeriados = { };
+                // int[] diasFeriados = { };
                 int[] diasFeriados = RetornaFeriados(mes, ano);
 
-                //impressão do calendário
+                // impressão do calendário
                 for (int semana = 0; semana < 6; semana++)
                 {
                     for (int diaSemana = 0; diaSemana < 7; diaSemana++)
@@ -87,7 +89,7 @@ namespace _09_Calendario
                     }
 
                 }
-                Console.WriteLine("\n--------------------------------------\n");
+                Console.WriteLine("\n---------------------------------------------------\n");
             }
 
             Console.WriteLine("Calendário completo exibido!");
